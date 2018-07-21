@@ -1,0 +1,302 @@
+
+
+html
+{
+	min-height:100%;
+}
+
+body {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+}
+
+a{
+	text-decoration: none
+}
+
+
+a:focus{
+	outline-color:black;
+}
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+li, ul{
+		list-style:none;
+		box-sizing:border-box;
+	}
+
+
+/* Nav */
+
+
+nav {
+	position:fixed;
+	display:block;
+	width:100%;
+	height:10vh;
+	font:black;
+	z-index:1000;
+	background-color: rgba(255, 255, 255, 0.9);
+	font:#333;
+}
+
+.nav__bottom {
+	position:absolute;
+	min-width:100%;
+	min-height:100%;
+	font:#333;
+	z-index:1000;
+	display:block;
+	background: url(images/bottom.png) repeat-x bottom left;
+	overflow:hidden;
+}
+
+.nav__container {
+	position:relative;
+	display:flex;
+	margin:auto;
+	justify-content:space-between;
+	align-items:center;
+	max-width:70%;
+	min-height:100%;
+	flex-direction:row;
+	z-index:1200;
+	
+}
+
+.nav__part {
+	min-height:100%;
+	position:relative;
+	font-family: 'Varela Round', sans-serif;
+	font-size:1.5em;
+	z-index:1200;
+	color:#333;
+	padding:0px 0px 0px 2vw;
+
+}
+
+.nav__part:before{
+    content: '';
+    position: absolute;
+    left:0;
+    top: 0px;
+    min-height: 100%;
+    border-right: 1px solid #333;
+    -webkit-transform: skewX(-35deg);
+    -ms-transform: skewX(-35deg);
+    -o-transform: skewX(-35deg);
+    -moz-transform: skewX(-35deg);
+    transform: skewX(-35deg);
+
+}
+
+.nav__part:hover{
+	color:black;
+	transition-duration:0.5s;
+}
+
+.nav__logoimg {
+	width:125px;
+	height:auto;
+	padding:5px;
+	z-index:1200;
+}
+
+
+
+
+/* Header */
+
+.header{
+	width: 100%;
+    min-height: 100vh;
+    background: url(images/6.jpg) no-repeat center / cover fixed;
+    position: relative;
+}
+
+.header2{
+	width: 100%;
+    min-height: 100vh;
+    background: url(images/5.jpg) no-repeat center / cover fixed;
+    position: relative;
+}
+
+.header3{
+	width: 100%;
+    min-height: 100vh;
+    background: url(images/7.jpg) no-repeat center / cover fixed;
+    position: relative;
+}
+
+.header4{
+	width: 100%;
+    min-height: 100vh;
+    background: url(images/4.jpg) no-repeat center / cover fixed;
+    position: relative;
+}
+
+.logo {
+	width:120px;
+	height:120px;
+	padding-top:5px;
+}
+
+h1 { 
+    display: flex;
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h3{
+    padding: 0px;
+    margin: 0px;
+}
+
+.backgroundnone {
+	display: none;
+}
+	
+/* Slideshow */
+#slide {
+	width:100%;
+	}
+	
+
+.mySlides {
+	display: none
+}
+
+.slideshow-container {
+	width:100%;
+	position: relative;
+	margin:0;
+
+}
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 2.2em;
+	transition: 1s ease;
+	border-radius: 0 3px 3px 0;
+}
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	background-color: rgba(51, 51, 51, .8);
+}
+
+
+
+/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1s;
+	animation-name: fade;
+	animation-duration: 1s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .9} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .9} 
+  to {opacity: 1}
+}
+
+.header__text {
+	position:absolute;
+	top:80%;
+	margin:0;
+	display:flex;
+	align-items:flex-end;
+	justify-content:flex-start;
+	width: auto;
+	margin-left:75%;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 3em;
+	transition: 2s ease;
+	border-radius: 0 3px 3px 0;
+}
+
+.header__text2 {
+	position:absolute;
+	top:25%;
+	margin:0;
+	display:flex;
+	align-items:flex-end;
+	justify-content:flex-start;
+	width: auto;
+	margin-left:70%;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 3em;
+	transition: 2s ease;
+	border-radius: 0 3px 3px 0;
+}
+
+.header__text3 {
+	position:absolute;
+	top:70%;
+	margin:0;
+	display:flex;
+	align-items:flex-end;
+	justify-content:flex-start;
+	width: auto;
+	margin-left:9%;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 3em;
+	transition: 2s ease;
+	border-radius: 0 3px 3px 0;
+}
+
+.header__text4 {
+	margin:0;
+	display:flex;
+	align-items:flex-start;
+	justify-content:flex-start;
+	width: auto;
+	margin-left:15%;
+	margin-top:10%;
+	padding: 16px;
+	color: #FFFF66;
+	font-weight: bold;
+	font-size: 3.5em;
+	transition: 2s ease;
+	border-radius: 0 3px 3px 0;
+}
+
+main {
+	height:100vh;
+	width:100%;
+}
+
+
+
+

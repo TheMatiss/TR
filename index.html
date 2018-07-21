@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Transport</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat|Varela+Round&amp;subset=latin-ext" rel="stylesheet">
+		<meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra, elit eu elementum accumsan, urna massa feugiat ipsum, et tristique nisl leo nec neque.">
+		<meta name="keywords" content="Transport, architecture, design">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="images/logo.svg">
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		
+	</head>
+
+	<body>
+		
+			<nav>
+			<div class="nav__bottom"></div>
+			<ul class="nav__container">
+			<a href="#"><li>
+			<img src="images/logo.svg" class="nav__logoimg">
+			</li></a>
+			<a href="#"><li class="nav__part">O NAS</li></a>
+			<a href="#"><li class="nav__part">FLOTA</li></a>
+			<a href="#"><li class="nav__part">PARTNERZY</li></a>
+			<a href="#"><li class="nav__part">KIERUNKI</li></a>
+			<a href="#"><li class="nav__part">PRACA</li></a>
+			<a href="#"><li class="nav__part">KONTAKT</li></a>
+			</ul>
+		
+			</nav>
+		
+			<div id="slide">
+			<div class="slideshow-container">
+			
+			<div class="mySlides fade"> 
+			<header class="header">
+			<img src="images/6.jpg" alt="project" class="backgroundnone">
+			<p class="header__text"></p></header> 
+			</div>
+			
+			<div class="mySlides fade">
+			<header class="header2">
+			<img src="images/5.jpg" alt="" style="display:none">
+			<p class="header__text2"></p></header>
+			</div>
+			
+			<div class="mySlides fade">
+			<header class="header3">
+			<img src="images/7.jpg" alt="" style="display:none">
+			<p class="header__text3"></p></header>
+			</div>
+ 
+			
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a> 
+			</div></div>
+			<div> 
+			<span class="dot" onclick="currentSlide(1)"></span> 
+			<span class="dot" onclick="currentSlide(2)"></span> 
+			<span class="dot" onclick="currentSlide(3)"></span> 
+			</div>
+		
+		
+		<main class="main">
+		
+		<section class="about">
+		<div class="about__wrapper">
+		<article class="about__content">
+		<h2 class="about__header">WE'RE ZETASUM</h2>
+		<p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent elementum tempor nisl facilisis maximus. Nulla vehicula congue mauris in finibus. Sed facilisis mattis ultrices. Suspendisse id tempus tellus. Vestibulum in posuere ante.</p>
+		<p class="about__text">Vivamus non gravida nunc. Phasellus faucibus libero eu turpis rutrum viverra et in turpis. Ut sit amet lobortis dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis erat mauris, efficitur sit amet semper in, commodo vel purus. Ut posuere, ante eu lobortis ornare, risus felis vehicula diam, id pellentesque neque purus vel quam.</p>
+		<a href="#" class="button"> Learn More </a>
+		</article></div>
+		</section>
+		
+		
+		
+		
+		
+		</main>
+		
+		
+	
+	
+	
+</body>
+
+		<script>
+		
+
+			var slideIndex = 1;
+			var timer = null;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			  clearTimeout(timer);
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			  clearTimeout(timer);
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("dot");
+			  if (n==undefined){n = ++slideIndex}
+			  if (n > slides.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+				  slides[i].style.display = "none";
+			  }
+			  for (i = 0; i < dots.length; i++) {
+				  dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";
+			  dots[slideIndex-1].className += " active";
+			  timer = setTimeout(showSlides, 6000);
+		} 
+		</script>
+</html>
