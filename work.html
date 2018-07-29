@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Transport</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat|Varela+Round&amp;subset=latin-ext" rel="stylesheet">
+		<meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra, elit eu elementum accumsan, urna massa feugiat ipsum, et tristique nisl leo nec neque.">
+		<meta name="keywords" content="Transport, architecture, design">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="images/logo.svg">
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		
+	</head>
+
+	<body>
+		
+			<nav>
+			<div class="nav__bottom"></div>
+			<ul class="nav__container2">
+			<a href="#"><li>
+			<img src="images/previous.svg" class="work__img2" alt="">
+			</li></a>
+			<a href="#"><li class="nav__part2">POWRÓT</li></a>
+			</ul>
+		
+			</nav>
+			
+			<div id="slide">
+			<div class="overlay2"></div>
+			<div class="slideshow-container">
+			
+			<div class="mySlides fade"> 
+			<header class="header">
+			<img src="images/11.jpg" alt="project" class="backgroundnone">
+			<p class="header__text"></p></header> 
+			</div>
+			
+			<div class="mySlides fade">
+			<header class="header2">
+			<img src="images/8.jpg" alt="" style="display:none">
+			<p class="header__text2"></p></header>
+			</div>
+			
+			<div class="mySlides fade">
+			<header class="header3">
+			<img src="images/10.jpg" alt="" style="display:none">
+			<p class="header__text3"></p></header>
+			</div>
+ 
+			
+			 
+			</div>
+			<div> 
+			<span class="dot" onclick="currentSlide(1)"></span> 
+			<span class="dot" onclick="currentSlide(2)"></span> 
+			<span class="dot" onclick="currentSlide(3)"></span> 
+			</div></div>
+			<section class="work__template">
+			<div class="work__templatestructure1">
+			<div class="work__templateimgd">
+			<img class="work__templateimg" src="images/w1.svg" alt =""></div>
+			<div class="work__templatestructure2">
+			<div class="work__templatepart">
+			<h1 class="work__templateheader">Czego wymagamy:</h1>
+			<ul class="work__templatelist">
+			<li class="work__templatenb">Biegłej znajomości jednego języka obcego – preferowany język niemiecki i angielski.</li>
+			<li class="work__templatenb">
+			Doświadczenia na podobnym stanowisku.</li>
+			<li class="work__templatenb">Łatwości nawiązywania kontaktów.</li>
+			<li class="work__templatenb">Dobrej organizacji własnej pracy.</li>
+			<li class="work__templatenb">Odporności na stres</li>
+			</ul>
+			</div>
+			<div class="work__templatepart">
+			<h1 class="work__templateheader">Co oferujemy:</h1>
+			<ul class="work__templatelist">
+			<li class="work__templatenb">Stabilną pracę w przyjaznej atmosferze.</li>
+			<li class="work__templatenb">Wynagrodzenie adekwatne do posiadanych umiejętności i doświadczenia.</li>
+			<li class="work__templatenb">Możliwość rozwoju zawodowego i zdobycia cennego doświadczenia.</li>
+			</ul>
+			</div>
+			</div>
+			<div class="work__templatesum">Jeśli spełniasz powyższe wymagania i chcesz pracować w naszej firmie wyślij CV na adres e-mail: praca@tr.pl</div>
+			</div>
+			</section>
+		
+	
+	
+	
+</body>
+
+		<script>
+		
+
+			var slideIndex = 1;
+			var timer = null;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			  clearTimeout(timer);
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			  clearTimeout(timer);
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("dot");
+			  if (n==undefined){n = ++slideIndex}
+			  if (n > slides.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+				  slides[i].style.display = "none";
+			  }
+			  for (i = 0; i < dots.length; i++) {
+				  dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";
+			  dots[slideIndex-1].className += " active";
+			  timer = setTimeout(showSlides, 6000);
+		} 
+		</script>
+</html>
