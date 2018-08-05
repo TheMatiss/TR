@@ -581,14 +581,14 @@ main {
 }
 
 
-.work{
+#work{
 	z-index:250;
-	height:40vh;
+	height:55vh;
 	width:100%;
 	margin:auto;
 	box-sizing: border-box;
     display: block;
-	margin-top:15vh;
+	padding-top:15vh;
 	margin-bottom:15vh;
 }
 
